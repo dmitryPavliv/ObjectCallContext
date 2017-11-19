@@ -28,21 +28,21 @@ It works well with both regular `Threads` and `Tasks`
     }
     
     [TestMethod]
-        public async Task WotksWithTasks()
+    public async Task WotksWithTasks()
+    {
+        //Arrange
+        string key = "test_key";
+        object obj = new object();
+
+        //Act
+        object actual = null;
+
+        ObjectCallContext.TrySetData(key, obj);
+        await Task.Run(() =>
         {
-            //Arrange
-            string key = "test_key";
-            object obj = new object();
+            ObjectCallContext.TryGetData(key, out actual);
+        });
 
-            //Act
-            object actual = null;
-
-            ObjectCallContext.TrySetData(key, obj);
-            await Task.Run(() =>
-            {
-                ObjectCallContext.TryGetData(key, out actual);
-            });
-            
-            //Assert
-            Assert.AreEqual(obj, actual);
-        }
+        //Assert
+        Assert.AreEqual(obj, actual);
+    }
