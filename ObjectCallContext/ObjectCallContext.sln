@@ -9,11 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8DD6A887
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectCallContext.Tests", "ObjectCallContext.Tests\ObjectCallContext.Tests.csproj", "{A06AC40B-1FF9-4734-978F-59967C435D22}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuSpec", "NuSpec", "{8BF85871-8456-4877-AAE7-A58CCC4F20C0}"
-	ProjectSection(SolutionItems) = preProject
-		ObjectCallContext.nuspec = ObjectCallContext.nuspec
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
