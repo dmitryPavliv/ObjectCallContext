@@ -6,6 +6,7 @@
     <title>ObjectCallContext</title>
     <authors>Dmitry Pavliv</authors>
     <owners>Dmitry Pavliv</owners>
+    <projectUrl>https://github.com/dmitryPavliv/ObjectCallContext</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Class to share objects by ref across threads</description>
     <summary>Just imagine you want to share object by reference across threads (very close as you can do share data with help of LogicalCallContext). LogicalCallContext is expensive - it serialize / deserialize data each time thread context is switched. As a result it won't preserve object reference. Idea for ObjectCallContext was borrowed from TransactionScope class. It works well with both regular Threads and Tasks</summary>
