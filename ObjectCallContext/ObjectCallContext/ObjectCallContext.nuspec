@@ -13,6 +13,6 @@
     <tags>ObjectCallContext</tags>
   </metadata>
   <files>
-    <file src="$BuildPath$\bin\Release\ObjectCallContext.dll" target="lib/net45"/>
+    <file src="C:\projects\objectcallcontext\ObjectCallContext\ObjectCallContext\bin\Release\ObjectCallContext.dll" target="lib/net45"/>
   </files>
 </package>
