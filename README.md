@@ -1,6 +1,6 @@
 # ObjectCallContext
 
-Just imagine you want to share object by reference across threads (very close as you can share data with help of [`LogicalCallContext`](https://msdn.microsoft.com/en-us/library/system.runtime.remoting.messaging.logicalcallcontext(v=vs.110).aspx)). `LogicalCallContext` is expensive - it serialize / deserialize data each time thread context is switched. As a result it won't preserve object reference. Idea for ObjectCallContext was borrowed from [`TransactionScope`](https://referencesource.microsoft.com/#System.Transactions/System/Transactions/Transaction.cs,a538de61b60d1252) class.
+Just imagine you want to share object by reference across threads (very close as you can share data with help of [`LogicalCallContext`](https://msdn.microsoft.com/en-us/library/system.runtime.remoting.messaging.logicalcallcontext(v=vs.110).aspx)). `LogicalCallContext` is expensive - it serializes / deserializes data each time thread context is switched. As a result it won't preserve object reference. Idea for ObjectCallContext was borrowed from [`TransactionScope`](https://referencesource.microsoft.com/#System.Transactions/System/Transactions/Transaction.cs,a538de61b60d1252) class.
 It works well with both regular `Threads` and `Tasks`
 
 ```c#
@@ -28,7 +28,7 @@ public void WorksWithThreadPoolThreads()
 }
 
 [TestMethod]
-public async Task WotksWithTasks()
+public async Task WorksWithTasks()
 {
     //Arrange
     string key = "test_key";
